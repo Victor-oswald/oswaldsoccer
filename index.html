@@ -1,7 +1,16 @@
 <!DOCTYPE html>
 <html>
 
-<head>
+<head><!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-S02YTT7RXK"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-S02YTT7RXK');
+    </script>
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="keyword"
         content="betting; lottery; prediction; bet; football betting; sure prediction; game prediction; football correct score
@@ -15,45 +24,43 @@
 <body>
     <div class="container">
         <div class="navbar">
-            <span class="menu" style="font-size:30px; cursor:pointer" onclick="openNavigation()">MENU</span>
-            <a href="higlights.html" target="_blank">Highlights</a>
-            <a href="Match updates" target="_blank">Match Analysis</a>
-            <a href="Football news" target="_blank">Football news</a>
+            <span class="menu" style="font-size:100%; cursor:pointer" onclick="openNavigation()">MENU</span>
+            <a href="highlights.html" target="_blank">Highlights</a>
+            <a href="analysis.html" target="_blank">Analysis</a>
+            <a href="news.html" target="_blank">News</a>
         </div>
         </br></br></br>
-        <img alt="icon" style="width:150px;height:150px;border:none;border-radius:80%; position:fixed;top:0"
+        <img alt="icon" style="width:8%;height:8%;border:none;border-radius:80%; position:fixed;top:0"
             src="oswald1.jpg.png" />
         </br></br></br>
         <div id="mySidebar" class="sidebar">
             <h1 style="color:blue; font-size:xx-large">MENU</h1></br></br><br>
             <a href="javascript:void(0)" class="closebtn" onclick="closeNavigation()">&times;</a>
-            <button id="predbtn">Predictions</button></br></br>
+            <button id="predbtn" onclick="Prediction()">Predictions</button></br></br>
             <button type="button" onclick="table()" id="htbbtn">Tables</button></br></br>
             <div class="htbbtn-content" id="table-content">
                 <a href="premier league tables.html">premier league</a></br></br>
                 <a href="serie a table.html">Serie A table</a></br>
-                <a href="Top goal scorers.html">EPL Top goal scorers</a></br>
+                <a href="Top goal scorers.html"> Top goal scorers</a></br>
                 <a href="champions league table.html">Champions League</a>
             </div>
             <button id="hfbtn" onclick="fixtures()">Fixtures</button></br></br>
             <div class="hfbtn-content" id="fixture-content">
                 <a href="fixtures.html">Serie A </a></br></br>
                 <a href="premier league.html">Premier league</a></br>
-                <a href="">Champions league</a></br></br>
-                <a href="">Laliga </a></br></br>
-                <a href="">League 1</a></br></br>
-                <a href="">Bundesliga</a></br></br>
+                <a href="champions league fixtures.html">Champions league</a></br></br>
+                <a href="laliga.html">Laliga </a></br></br>
             </div>
-            <button id="abtbtn">About us</button>
+            <button id="abtbtn" onclick="About()">About us</button>
         </div>
         <script>
             function openNavigation() {
-                document.getElementById("mySidebar").style.width = "250px"
+                document.getElementById("mySidebar").style.width = "60%";
             }
             function closeNavigation() {
                 document.getElementById("mySidebar").style.width = "0px";
-
             }
+            document.getElementById("mySidebar").onload.style.display="none"
 
             function table() {
                 var tmenu = document.getElementById("table-content");
@@ -72,122 +79,140 @@
                     fmenu.style.display = "none"
                 }
             }
+            function Prediction(){
+            var prediction=document.getElementById("predbtn");
+            prediction=window.location.href="predictions.html";}
+            function About(){
+var about=document.getElementById("abtbtn");
+about=window.location.href="about us.html";}
+const result=[
+    "scores", "predictions", "fixtures","table","news","About"
+]
+var x=document.getElementById("search").value;
+var y=x.value;
+for(var i=0; i<result.length; ++i){
+    if(y==[i]){
+        document.getElementById("search-result").style.display="block";
+    }
+}
         </script>
 
 
         <div class="page">
             <center></br></br>
 
-                <div>
-                    <input type="search" placeholder="search anything" name="search"
-                        style="width: 50%; height:60px;background-color: aliceblue;" />
-                    <button type="submit" style="height:50px;">search</button>
+                <div style="background-color:#333;">
+                    <h4>Choose your favourite league</h4>
                 </div>
-            </center>
+                <div>
+                  <a href="newsletter.html"><button style="padding:5px; background-color:inherit">Premier League</button></a><a href="newsletter.html"><button style="padding:5px; background-color:inherit">Champions League</button></a><a href="newsletter.html"><button style="padding:5px; background-color:inherit">Europa League</button></a><a href="newsletter.html"><button style="padding:5px; background-color:inherit">Laliga</button></a><a href="newsletter.html"><button style="padding:5px; background-color:inherit">Serie A</button></a><a href="newsletter.html"><button style="padding:5px;background-color:inherit">League 1</button></a><a href="newsletter.html"><button style="padding:5px; background-color:inherit">More</button></a>
+                </div>
+                </center>
 
-            <p class="quote"><i>Over the years now, betting has become the means of extra income for sports lovers more
+            <p class="quote"><i>Over the years, betting has become the means of extra income for sports lovers more
                     especially the football lovers</br>
                     it really contributes immensly for the livelihoods of many individuals who take interest in it.</br>
-                    but the question asked by many is where exactly can these games be analised accurately.</br> Though
+                    but the question asked by many is where exactly can these games be analysed accurately.</br> Though
                     matches can't be analysed 100% acurately,
-                    but based on statistics,</br> it can be analised almost accurately by some experts and here we are
+                    but based on statistics,</br> it can be analysed almost accurately by some experts and here we are
                     to provide you with the best match predictions based solely on statistics.
                 </i></p>
             <h1 class="fix">MATCH FIXTURES FOR THE WEEK</h1>
             </br></br></br>
-            <h1 style="color:blue">ENGLAND</h1>
+            <h1 style="color:blue">EPL</h1>
             <div class="eng">
-                <div style="background-color:grey;font-size: larger;">Saturday 1st October</div>
-                <h4>ARSENAL VS TOTTENHAM </h4>
-                <p>FT 3:1</p></br>
-                <h4>BOURNAMOUTH VS BRENTFORD </h4>
-                <p>15:00</p></br>
-                <h4>CRYSTAL PALACE VS CHELSEA</h4>
-                <P>15:00</P></br>
-
-                <h4>FULHAM VS NEWCASTLE</h4>
-                <p>15:00</p></br>
-                <h4>LIVERPOOL VS BRIGHTON</h4>
-                <p>15:00</p></br>
-                <h4> WEST HAM VS WOLVERHAMPTON</h4>
-                <p>17:30</p></br>
-                <h4>SOUTHAMPTON VS EVERTON </h4>
-                <p>15:00</p></br>
-                <div style="background-color:grey; font-size:larger">sunday 2nd October</div>
-                <h4>MAN CITY VS MAN UTD</h4>
-                <p>14:00</p></br>
-                <h4>LEEDS VS ASTON VILLA</h4>
-                <p>16:30</p></br>
-                <div style="background-color:grey;font-size:Larger">Monday 3rd October</div>
-                <h4>LEICESTER VS NOTHINGHAM FOREST<p>20:00</p>
-                </h4>
+                
+                <div style="background-color:grey;font-size:Larger">Tuesday, 18th October</div>
+                <h4>Brighton vs Nottingham Forest
+                </h4><p style="color:grey">FT</p><span>0-0</span></br></br>
+                <h4>Crystal Palace vs Wolverhampton</h4><p style="color:grey">FT</p><span>2-1</span></br></br>
+                <div style="background-color:grey;font-size: larger;">Wednesday, 19th October</div>
+                <h4>Arsenal vs Manchester City</h4><p>postp</p></br></br>
+                <h4>Brentford vs Chelsea</h4><p>19:30</p></br></br>
+                <h4>Bournemouth vs southampthon</h4><p>19:30</p></br></br>
+                <h4>Liverpool vs West Ham</h4><p>19:30</p></br></br>
+                <h4>Newcastle vs Everton</h4><p>19:30</p></br></br>
+                <h4>Manchester United vs Tottenham</h4><p>20:15</p></br></br>
+                <div style="background-color:grey; font-size:larger">Thursday, 20th October</div>
+                <h4>Fulham vs Aston Villa</h4><p>19:30</p></br></br>
+                <h4>Leicester City vs Leeds United</h4><p>20:15</p></br></br>
+            <div style="background-color:grey;font-size:Larger">Saturday, 22nd October</div>
+            <h4>Nottingham Forest Vs Liverpool</h4><p>12:30</p></br></br>
+            <h4>Everton vs Crystal Palace</h4><p>15:00</p></br></br>
+            <h4>Manchester City vs Brighton</h4><p>15:00</p></br></br>
+            <h4>Chelsea vs Manchester United</h4><p>17:30</p></br></br>
+            <div style="background-color:grey;font-size:Larger">Sunday, 23rd October</div>
+            <h4>Wolverhampton vs Leicester City</h4><p>14:00</p></br></br>
+            <h4>Aston Villa vs Brentford</h4><p>14:00</p></br></br>
+            <h4>Southampton vs Arsenal</h4><p>14:00</p></br></br>
+            <h4>Leeds United vs Fulham</h4><p>14:00</p></br></br>
+            <h4>Tottenham vs Newcastle</h4><p>16:30</p></br></br>
+            <div style="background-color:grey;font-size:Larger">Monday, 24th October</div>
+            <h4>West Ham vs Bournemouth</h4><p>20:00</p></br>
             </div></br></br>
             <button id="engbtn" onclick="viewAll()">view all</button>
             <div id="engother">
                 <h1 style="color:blue">ITALY</h1>
                 <div class="ita">
-                    <div style="background-color:grey;font-size:larger">Saturday 1st October</div>
-                    <h4>NAPOLI VS TORINO</h4>
-                    <p>14:00</p></br>
-                    <h4>INTER MILAN vs ROMA</h4>
-                    <p>17:00</p></br>
-                    <h4>EMPOLI VS AC MILAN</h4>
-                    <p>19:45</p></br>
-                    <div style="background-color:grey;font-size:larger">Sunday 2nd October</div>
-                    <h4>LAZIO VS SPEZIA CALCIO</h4>
-                    <p>11:30</p></br>
-                    <h4>LECCE VS CREMONESE</h4>
-                    <p>14:00</p></br>
-                    <h4>SAMPDORIA VS AC MONZA</h4>
-                    <p>14:00</p></br>
-                    <h4>SASSUOLO VS SALERNITANA</h4>
-                    <p>14:00</p></br>
-                    <h4>ATALANTA VS FIORENTINA</h4>
-                    <p>17:00</p></br>
-                    <h4>JUVENTUS VS BOLOGNA</h4>
-                    <p>19:45</p></br>
-                    <div style="background-color:grey;font-size:larger">Monday 3rd October</div>
-                    <h4>HELLAS VERONA VS UDINESE</h4>
-                    <p>19:45</p></br>
+                    <div style="background-color:grey;font-size:larger">Monday, 17th October</div>
+                        <h4>Sampdoria vs Roma</h4><p style="color:grey">FT</p><span>0-1</span></br></br>
+                        <h4>Lecce vs Fiorentina</h4><p style="color:grey">FT</p><span>1-1</span></br></br>
+                        <div style= "background-color:grey;font-size:larger">Friday 21st October</div>
+                    <h4>Juventus vs Empoli</h4><p>19:45</p></br></br>
+                    <div style="background-color:grey;font-size:Larger">Saturday 22nd October</div>
+                    <h4>Salernitana vs Spezia Calzio</h4><p>14:00</p></br></br>
+                    <h4>AC Milan vs AC Monza</h4><p>17:00</p></br></br>
+                    <h4>Fiorentina vs Inter Milan</h4><p>19:45</p></br></br>
+                    <div style="background-color:grey;font-size:larger">Sunday 23rd October</div>
+                    <h4>Udinese vs Torino</h4><p>11:30</p></br></br>
+                    <h4>Bologna vs Lecce</h4><p>14:00</p></br></br>
+                    <h4>Atalanta vs Lazio</h4><p>17:00</p></br></br>
+                    <h4>Roma vs Napoli</h4><p>19:45</p></br></br>
+                    <div style="background-color:grey;font-size:Larger">Monday 24th October</div>
+                    <h4>Cremonese vs Sampdoria</h4><p>17:30</p>
+                    <h4>Sassuolo vs Hellas Verona</h4><p>19:45</p>
                 </div></br></br>
                 <h1 style="color:blue">FRANCE</h1>
                 <div class="fra">
-                    <div style="background-color:grey;font-size:larger">Saturday 1st October</div>
-                    <h4>STRASBOURG VS RENNES</h4>
-                    <p>16:00</p>
-                    <h4>PSG VS NICE</h4>
-                    <p>20:00</p>
-                    <div style="background-color:grey;font-size:larger">Sunday 2nd October</div>
-                    <h4>LORIENT VS LILLE</h4>
-                    <p>12:00</p></br>
-                    <h4>AC AJACCIO VS CLERMONT FOOT</h4>
-                    <p>14:00</p></br>
-                    <h4>AUXERRE VS BREST</h4>
-                    <p>14:00</p></br>
-                    <h4>TOLOUSE VS MONTPELLIER</h4>
-                    <p>14:00</p></br>
-                    <h4>TROYES VS REIMS</h4>
-                    <p>14:00</p></br>
-                    <h4>MONACO VS NANTES</h4>
-                    <p>16:05</p></br>
-                    <h4>RC LENS VS LYON</h4>
-                    <p>19:45</p></br>
-                    <div style="background-color:grey;font-size:larger">Friday 7th October</div>
-                    <h4>LYON VS TOLOUSE</h4>
-                    <p>20:00</p></br>
+                    <div style="background-color:grey;font-size:larger">Friday 21st October</div>
+                    <h4>AC Ajaccio vs PSG</h4><p>20:00</p></br></br>
+                    <div style="background-color:grey;font-size:larger">Saturday 22nd October</div>
+                     <h4>Montpellier vs Lyon</h4><p>16:00</p></br></br>
+                     <h4>Marseille vs RC Lens</h4><p>20:00</p></br></br>
+                     <div style="background-color:grey;font-size:larger">Sunday 23rd October</div>
+                     <h4>Angers vs Rennes</h4><p>12:00</p></br></br>
+                     <h4>Clermont vs Brest</h4><p>14:00</p></br></br>
+                     <h4>Reims vs Auxerre</h4><p>14:00</p></br></br>
+                     <h4>Tolouse vs Strasbourg</h4><p>14:00</p></br></br>
+                     <h4>Troyes vs Lorient</h4><p>14:00</p></br></br>
+                     <h4>Nice vs Nantes</h4><p>16:05</p></br></br>
+                     <h4>Lille vs Monaco</h4><p>19:45</p></br></br>
                 </div></br></br>
                 <h1 style="color:blue">SPAIN</h1>
                 <div class="spa">
+                    <div style="background-color:grey;font-size:larger">Monday 17th October</div>
+                    <h4>Villarreal vs Osasuna</h4><p style="color:grey">FT</p><span>2-0</span></br></br>
+                    <div style="background-color:grey;font-size:larger">Tuesday 18th October</div>
+                    <h4>Sevilla vs Valencia</h4><p>18:00</p></br></br>
+                     <h4>Getafe vs Athletico Bilbao</h4><p>19:00</p></br></br>
+                     <h4>Atletico Madrid vs Rayo vallecano</h4><p>20:00</p></br></br>
                 </div></br></br>
-                <h1 style="color:blue">OTHER COUNTRIES</h1>
+                <h1 style="color:blue">OTHERS</h1>
                 <div class="other">
+                    <h1>UEFA Europa League</h1>
+                    <div style="background-color:grey;font-size:larger">Thursday, 20th October</div>
+                    <h4>Arsenal vs PSV</h4><p>18:00</p></br></br>
                 </div>
+            </div>
+            <div></br></br></br>
+                <img src="images.jpeg.jpg" style="width:300px"/></br>
+                <a href="news.html">Erling haaland's hat tricks story.</a>
             </div>
             <center>
                 <div>
-                    <a href="##" class="fa fa-facebook"></a>
-                    <a href="##" class="fa fa-telegram"></a>
-                    <a href="##" class="fa fa-linkedin"></a>
+                    <a href="https://www.facebook.com/profile.php?id=100066426476006" class="fa fa-facebook"></a>
+                    <a href="t.me/oswaldsoccer" class="fa fa-telegram"></a>
+                    <a href="https://twitter.com/VictorOswald01?t=KWsu3yQsFczxfyA5XNSGGg&s=01" class="fa fa-twitter"></a>
                     <a href="https://youtube.com/channel/UCq-o4MyDCushNHS9VONNRiQ" class="fa fa-youtube"></a>
                 </div>
             </center>

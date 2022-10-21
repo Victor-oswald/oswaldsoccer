@@ -1,13 +1,14 @@
 .fixtures{
 height: 100%;
-width:300px;
+width:50%;
 position: fixed;
 z-index: 1;
 top: 0;
 left: 0;
 background-color: black;
-overflow:hidden;
+overflow:auto;
 padding-top: 20px;
+display:none;
 }
 .fixtures a{
     padding: 6px 8px 6px 16px;
@@ -20,7 +21,7 @@ padding-top: 20px;
     color: #f1f1f1;
 }
 .fixturebody{
-    margin-left: 300px;
+    margin-left: 0;
     padding: 0px 10px;
 }
 .head{
@@ -55,7 +56,6 @@ h6{
 }
 .premier-tb{
     width:fit-content;
-    background-color:
 }
 .premier-drop-content{
     display: none;
@@ -100,14 +100,148 @@ overflow:auto;
     text-align: left;
     padding-top:15px;
     padding-bottom:15px;
-    background-color:blue;
+    background-color:#818181;
     color:white;
     width:5%;
     height:80%;
 }
-#serie-a tr:nth-child(even),#premier tr:nth-child(even), #Tp-Gscorers tr:nth-child(even), .groupA tr:nth-child(odd), .groupB tr:nth-child(odd), .groupC tr:nth-child(odd), .groupD tr:nth-child(odd), .groupE tr:nth-child(odd), .groupF tr:nth-child(odd), .groupG tr:nth-child(odd), .groupH tr:nth-child(odd){
+#serie-a tr:nth-child(even),#premier tr:nth-child(even), #Tp-Gscorers tr:nth-child(even), .groupA tr:nth-child(even), .groupB tr:nth-child(even), .groupC tr:nth-child(even), .groupD tr:nth-child(even), .groupE tr:nth-child(even), .groupF tr:nth-child(even), .groupG tr:nth-child(even), .groupH tr:nth-child(even){
     background-color: #f2f2f2;
 }
 #serie-a tr:hover,#premier tr:hover, #Tp-Gscorers tr:hover,.groupA tr:hover, .groupB tr:hover, .groupC tr:hover, .groupD tr:hover, .groupE tr:hover, .groupF tr:hover, .groupG tr:hover, .groupH tr:hover{
     background-color: #ddd;
+}
+.fdrop{
+    display:block;
+ width:fit-content;
+ background-color: black; 
+float:left;
+height: fit-content;
+padding:10px;
+position: sticky;
+top:0;
+}
+.fdrop-content{
+ color:white;
+ font-size :70%;
+
+}
+.fdrop-content:hover{
+    color:red;
+}
+.fdrop:hover .fixtures{
+    display:block
+}
+#tpgoalmenu{
+    display:none;
+    width:fit-content;
+    background-color: black;
+    position: fixed;
+    left:0;
+    z-index: 1;
+}
+#topgoalmenu a{
+    color:#818181;
+    font-size:x-large;
+    display:inline-block;
+
+
+
+}
+#tpgoalmenubtn, #tpgoalhomebtn, #tpgoalpredictionbtn, #tpgoalnewsbtn{
+    font-size: x-large;
+    padding-right: 3%;
+    padding-left: 3%;
+    text-transform: uppercase;
+    color:white;
+    background-color: inherit;
+}
+#tpgoalmenubtn:hover, #tpgoalhomebtn:hover, #tpgoalpredictionbtn:hover, #tpgoalnewsbtn:hover{
+    background-color: red;
+    font-size:xx-large ;
+}
+#tpgoalmenubtn :hover .tpgoalmenu a{
+    display:block;
+}
+#vip{
+    color:red;
+    padding:none;
+    font-size:25px;
+    animation:infinite;
+    animation-name: vip;
+    animation-duration: 0.5s;
+    animation-direction: reverse;
+    background-color: inherit;
+    border:none ;
+    float:right;
+    position:fixed;
+    right:0;
+    bottom:0;
+
+}
+@keyframes vip{
+    from{font-size:0px;}
+    to {font-size:70px;}
+}
+#predhome, #predanalysis, #prednews{
+    text-transform: uppercase;
+    font-size: x-large;
+    padding:20px;
+    color:white;
+    background-color: #818181;
+
+}
+.fa{
+    position:static;
+    bottom:0;
+    padding:10px;
+    font-size:200px;
+    width:50px;
+    text-align:center;
+    text-decoration:none;
+    text-align:center;
+    border-radius: 100%;
+}
+.fa-facebook{
+    background-color:inherit;
+    color:blue;
+}
+.fa-youtube{
+    background-color:inherit;
+    color:red;
+    
+}
+.fa-twitter{
+    background-color:inherit;
+    color:blue;
+}
+.fa-telegram{
+    background-color:inherit;
+    color:blue;
+}
+.anatable{
+    border:collapse;
+    width:70%;
+}
+.anatable th{
+    text-align: center;
+    font-size: x-large;
+    background-color: skyblue;
+}
+.anatable td{
+    text-align: center;
+    font-size:larger;
+    border:1px solid black;
+}
+
+.anatable tr:hover{
+    background-color: #ddd;
+}
+
+@media screen {
+  .anatable th{
+    font-size: large;
+    text-align: center;
+  }  
+  .anatable{width:70%}
 }
